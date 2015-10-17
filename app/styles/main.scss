@@ -14,6 +14,23 @@ body {
   padding: 0;
 }
 
+.difficulty {
+  width: 10px;
+  height: 1em;
+  margin-right: 5px;
+  display: inline-block;
+
+  &.easy {
+    background-color: green;
+  }
+  &.medium {
+    background-color: orange;
+  }
+  &.hard {
+    background-color: red;
+  }
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

@@ -1,12 +1,13 @@
 <h1>Katas</h1>
 <div class="jumbotron">
   <p class="lead">
-    <input type="text"></input>
+    <input type="text" ng-model="filterText"></input>
   </p>
 </div>
 
 <div class="row marketing">
-  <div ng-repeat="kata in katas">
-    <h4>{{kata.name}}</h4>
+  <div ng-repeat="kata in katas | filter:filterText">
+    <h4><div class="difficulty {{kata.difficulty}}"></div>{{kata.name}}</h4>
+    <p>{{kata.short_description}}</p>
   </div>
 </div>
