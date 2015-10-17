@@ -27,5 +27,6 @@ angular.module('katarsApp')
 
       return {
         items: katas,
+        difficulties: difficulties
       };
     });

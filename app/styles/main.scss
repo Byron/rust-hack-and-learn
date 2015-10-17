@@ -3,6 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+$green: green;
+$orange: orange;
+$red: red;
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -14,22 +18,19 @@ body {
   padding: 0;
 }
 
-.difficulty {
-  width: 10px;
-  height: 1em;
-  margin-right: 5px;
-  display: inline-block;
+.label {
 
   &.easy {
-    background-color: green;
+    @include label-variant($green);
   }
   &.medium {
-    background-color: orange;
+    @include label-variant($orange);
   }
   &.hard {
-    background-color: red;
+    @include label-variant($red);
   }
 }
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,

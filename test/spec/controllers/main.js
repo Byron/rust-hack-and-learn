@@ -19,5 +19,6 @@ describe('Controller: MainCtrl', function () {
 
   it('should attach a list of awesome katas to the scope', function () {
     expect(scope.katas.length).not.toBe(0);
+    expect(scope.difficulties.length).not.toBe(0);
   });
 });

@@ -1,13 +1,23 @@
 <h1>Katas</h1>
 <div class="jumbotron">
-  <p class="lead">
-    <input type="text" ng-model="filterText"></input>
+  <p class="lead input-group">
+    <input type="text" placeholder="search for ..." ng-model="filterText"></input>
+    <div class="difficulties-radio">
+      <span ng-repeat="level in difficulties" class="label {{level}}" tooltip="Show only {{level}} katas">
+        <input type="checkbox" ng-model="filterDifficulties[level]" ng-change="MainCtrl.foo()" value="{{level}}"></input>
+        {{level}}
+      </span>
+    </div>
   </p>
 </div>
 
 <div class="row marketing">
-  <div ng-repeat="kata in katas | filter:filterText">
-    <h4><div class="difficulty {{kata.difficulty}}"></div>{{kata.name}}</h4>
+  <div ng-repeat="kata in katas | filter:filterText | byDifficulty:filterDifficulties as results">
+    <h4>
+      <span class="label {{kata.difficulty}}">{{kata.name[0]}}</span>{{kata.name.substr(1)}}</h4>
     <p>{{kata.short_description}}</p>
+  </div>
+  <div ng-if="results.length === 0">
+    <strong>No Katas found...</strong>
   </div>
 </div>
