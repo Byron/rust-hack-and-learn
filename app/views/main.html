@@ -1,12 +1,14 @@
 <h1>Katas</h1>
 <div class="jumbotron">
+  <p>
+    <div class="difficulties-radio btn-group">
+      <label uib-btn-checkbox ng-repeat="level in difficulties" class="btn btn-primary label" ng-class="level" ng-model="filterDifficulties[level]">{{level}}
+      </label>
+    </div>
+  </p>
   <p class="lead input-group">
     <input type="text" placeholder="search for ..." ng-model="filterText"></input>
   </p>
-  <div class="difficulties-radio btn-group">
-    <label uib-btn-checkbox ng-repeat="level in difficulties" class="btn btn-primary label" ng-class="level" ng-model="filterDifficulties[level]">{{level}}
-    </label>
-  </div>
 </div>
 
 <div class="row marketing">

@@ -18,7 +18,7 @@ angular.module('katarsApp')
           hljs.highlightBlock(block);
         });
       }, 500);
-    })
+    });
 
     if (kata) {
       Katas.descriptionPromise(kata)

@@ -50,10 +50,15 @@ angular.module('katarsApp')
         return $http.get([kataResourceUrl(kata.name), 'description.md'].join('/'), {cache: true});
       }
 
+      function fetchExample(kata, fileName) {
+        return $http.get([kataResourceUrl(kata.name), 'examples', fileName].join('/'), {cache: true});
+      }
+
       return {
         items: katas,
         difficulties: difficulties,
         byName: kataByName,
-        descriptionPromise: fetchDescription
+        descriptionPromise: fetchDescription,
+        exampleFilePromise: fetchExample
       };
     }]);

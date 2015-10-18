@@ -14,7 +14,7 @@
 </div>
 <div ng-if="kata.example.files">
   <h2>Examples</h2>
-  <codeexample ng-repeat="file in kata.example.files">{{file}}</codeexample>
+  <codeexample ng-repeat="file in kata.example.files" file-name="file" kata="kata"></codeexample>
 </div>
 <div class="no-kata-found" ng-if="!kata">
   <p>There is no Kata named '{{kataName}}'.</p>

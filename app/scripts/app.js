@@ -24,6 +24,9 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/pairing-guide', {
+        templateUrl: 'views/pairing.html',
+      })
       .when('/katas/:kata', {
         templateUrl: 'views/kata-details.html',
         controller: 'KataDetailCtrl',
