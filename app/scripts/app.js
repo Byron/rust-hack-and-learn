@@ -24,6 +24,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/install', {
+        templateUrl: 'views/download.html',
+        controller: 'DownloadCtrl',
+        controllerAs: 'ctrl'
+      })
       .when('/pairing-guide', {
         templateUrl: 'views/pairing.html',
       })
