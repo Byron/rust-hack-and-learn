@@ -24,9 +24,11 @@ Run `npm update && bower update` in the project directory.
 Additionally, you will need:
 
 * `compass` for transpiling `sass` to `css`
- - `sudo gem install compass` should do the job. 
+ - `sudo gem install compass` should do the job.
 
 ## Build & development
+
+[![Build Status](https://travis-ci.org/Byron/katars.svg?branch=master)](https://travis-ci.org/Byron/katars)
 
 Run `grunt` for building and `grunt serve` for preview.
 
