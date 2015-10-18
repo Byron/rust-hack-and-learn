@@ -5,6 +5,7 @@ node_js:
 - '0.12'
 before_script:
 - npm install -g bower grunt-cli
+- gem install compass
 - bower install
 after_success: '[ $TRAVIS_BRANCH = master ] && [ $TRAVIS_PULL_REQUEST = false ] &&
   sudo pip install ghp-import && grunt build && ghp-import -n dist && git push -fq
