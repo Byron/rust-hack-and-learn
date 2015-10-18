@@ -10,7 +10,7 @@ It provides:
 
 ## How to add a new Kata
 
-* open the [Katas.js][] service file and the Kata meta-data
+* open the [Katas.js][] service file and add meta-data for your new kata.
   - use the existing ones as example
   - don't forget to set the `originalSource` field in case the Kata is copied from elsewhere. Otherwise the field may remain unset.
 * place a markdown description file into [`resources/katas/<your kata name>/description.md`][res-katas]
@@ -19,7 +19,12 @@ It provides:
 
 ## Initial Setup
 
-Run `npm update && bower update`.
+Run `npm update && bower update` in the project directory.
+
+Additionally, you will need:
+
+* `compass` for transpiling `sass` to `css`
+ - `sudo gem install compass` should do the job. 
 
 ## Build & development
 
