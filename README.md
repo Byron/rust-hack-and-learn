@@ -1,5 +1,7 @@
 A simple web-app to assure one can exercise Rust katas even *without internet*. You can host it by running `make`, open an ad-hoc network and direct the students to your IP/hostname.
 
+![screen](https://raw.githubusercontent.com/Byron/katars/master/screen01.png)
+
 It provides:
 
 * a curated list of Katas
