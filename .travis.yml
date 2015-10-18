@@ -1,9 +1,15 @@
 sudo: false
 language: node_js
 node_js:
-  - 'iojs'
-  - '0.12'
-  - '0.10'
+- iojs
+- '0.12'
+- '0.10'
 before_script:
-  - 'npm install -g bower grunt-cli'
-  - 'bower install'
+- npm install -g bower grunt-cli
+- bower install
+after_success: '[ $TRAVIS_BRANCH = master ] && [ $TRAVIS_PULL_REQUEST = false ] &&
+  sudo pip install ghp-import && grunt build && ghp-import -n dist && git push -fq
+  https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages '
+env:
+  global:
+    secure: JFUjr4fmNv1ejQkXxjGYJdBAEsIXbw4Da47ScpB4qsjsIs6e3eCBGPlAKz4Xjfl92uECVvcr0wh3gMF+L6AEz8f2fG8JvldwBvo+vvZRLQPPMwQaq/ZOBhCZhEeobziD1se+rZ+yDgvFxVtaa0AL3cxGkOL0qokj71TdnXXV4GPA68RYf1kd/jLxUKDCahM2PPXVl7E/67hKS6xEeKVALnPYmK6/1aqCecGwQsU7Al3Xja+SWgQ9cF9fuweI8Bjs56EhZ2Ow7GpdbUMCw7ePpB6pyMAQktqUmO2h88K+tK4XpBR/VyzDX+yPk6CU9LdZ2FXhxqTf/Coh2C387kcYRkyz7QvxHBvqD4EbQ+KgR7CtoOL5MN/hr25sDy8lkm9yzkqIuaHovFkxfZ1rudDZC2e6Bw6DeTmhDu556YgecEaxcF9F7+ve1U2VAnBoraBG0FG2MZg3yA3WBQFTabmsx+5IAoiQyXiyLEqSmR3SoRJIHeIoETjtFTXi7NXR64JuUV66qyihavg96QA/MzR6xqfmtOeqVmRhHSLKtBOGX4wBvgufBXM9m0DGzQ8Hxfntoqi64EE54cBHAgwLLmicW+mhKg8t4zOcKAoDTzZLNLZy7MUR4NAwUMebX4/1k36oMfvKF9Dejx92f5GWP882CRupbg/UPwyiYOrjv7tvRUo=
