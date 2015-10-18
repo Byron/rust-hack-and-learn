@@ -111,7 +111,17 @@ module.exports = function (grunt) {
         }
       },
       dist: {
+        sudo: {
+            options: {
+            port: 80,
+            hostname: '0.0.0.0',
+            open: false,
+            base: '<%= yeoman.dist %>'
+          }
+        },
         options: {
+          port: 80,
+          hostname: '0.0.0.0',
           open: true,
           base: '<%= yeoman.dist %>'
         }
