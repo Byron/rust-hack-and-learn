@@ -1,28 +1,22 @@
 'use strict';
 
 angular.module('katarsApp')
-  .factory('Katas',
-    function() {
+  .factory('Katas', ['$http',
+    function($http) {
 
       var difficulties = ['easy', 'medium', 'hard'];
 
       var katas = [{
-        name: 'Kata1',
+        name: 'Simple Lists',
         difficulty: difficulties[0],
-        short_description: "This one is easy",
-        description: "multilines ... or from url ...",
-      },
-      {
-        name: 'Kata 2',
-        difficulty: difficulties[1],
-        short_description: "This one is not so easy",
-        description: "multilines ... or from url ...",
-      },
-      {
-        name: 'Kata 3',
-        difficulty: difficulties[2],
-        short_description: "This one is quite hard",
-        description: "multilines ... or from url ...",
+        shortDescription: "Implement a linked list",
+        originalSource: "http://codekata.com/kata/kata21-simple-lists/",
+        description_md: "multilines ... or from url ...",
+        example: {
+          files: [
+            'linked-list.rb'
+          ]
+        }
       }, ];
 
       var uniqueName = {};
@@ -31,6 +25,14 @@ angular.module('katarsApp')
           throw new Error("Duplicate name: " + katas[i]);
         }
         uniqueName[katas[i].name] = null;
+      }
+
+      function kataResourceUrl(name) {
+        return [
+          '/resources/',
+          'katas',
+          name
+        ].join('/');
       }
 
       function kataByName(name) {
@@ -44,9 +46,14 @@ angular.module('katarsApp')
         return found;
       }
 
+      function fetchDescription(kata) {
+        return $http.get([kataResourceUrl(kata.name), 'description.md'].join('/'), {cache: true});
+      }
+
       return {
         items: katas,
         difficulties: difficulties,
-        byName: kataByName
+        byName: kataByName,
+        descriptionPromise: fetchDescription
       };
-    });
+    }]);

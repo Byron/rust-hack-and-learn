@@ -2,13 +2,11 @@
 <div class="jumbotron">
   <p class="lead input-group">
     <input type="text" placeholder="search for ..." ng-model="filterText"></input>
-    <div class="difficulties-radio">
-      <span ng-repeat="level in difficulties" class="label {{level}}" tooltip="Show only {{level}} katas">
-        <input type="checkbox" ng-model="filterDifficulties[level]" ng-change="MainCtrl.foo()" value="{{level}}"></input>
-        {{level}}
-      </span>
-    </div>
   </p>
+  <div class="difficulties-radio btn-group">
+    <label uib-btn-checkbox ng-repeat="level in difficulties" class="btn btn-primary label" ng-class="level" ng-model="filterDifficulties[level]">{{level}}
+    </label>
+  </div>
 </div>
 
 <div class="row marketing">
@@ -17,7 +15,7 @@
       <span class="label on-the-left {{kata.difficulty}}"> </span>
       <a href="#/katas/{{main.encodeURI(kata.name)}}">{{kata.name}}</a>
     </h4>
-    <p>{{kata.short_description}}</p>
+    <p>{{kata.shortDescription}}</p>
   </div>
   <div ng-if="results.length === 0">
     <strong>No Katas found...</strong>

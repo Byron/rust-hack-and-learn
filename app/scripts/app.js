@@ -13,7 +13,9 @@ angular
     'ngAnimate',
     'ngMessages',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'btford.markdown',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider

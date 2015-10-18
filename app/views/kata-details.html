@@ -1,8 +1,21 @@
 <div class="kata-details" ng-if="kata">
-  <h1>{{kataName}}</h1>
-
-
+  <h2 class="{{kata.difficulty}}">
+    <a href="{{kata.originalSource}}">
+      <span ng-if="kata.originalSource" class="glyphicon glyphicon-copyright-mark"></span>
+    </a>
+    {{kata.name}}
+  </h2>
+  <h3>{{kata.shortDescription}}</h3>
+  <div ng-if="description" class="animate-if">
+    <div btf-markdown="description" class='description'></div>
+    </dpiv>
+    <div ng-if="!description" class='description-placeholder'></div>
+  </div>
+</div>
+<div ng-if="kata.example.files">
+  <h2>Examples</h2>
+  <codeexample ng-repeat="file in kata.example.files">{{file}}</codeexample>
 </div>
 <div class="no-kata-found" ng-if="!kata">
-  <p>There is no Kata named '{{kataName}}'.
+  <p>There is no Kata named '{{kataName}}'.</p>
 </div>
