@@ -1,4 +1,4 @@
-A simple web-app to assure one can exercise Rust katas even without internet.
+A simple web-app to assure one can exercise Rust katas even *without internet*. You can host it by running `make`, open an ad-hoc network and direct the students to your IP/hostname.
 
 It provides:
 
