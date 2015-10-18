@@ -12,9 +12,11 @@
 </div>
 
 <div class="row marketing">
-  <div ng-repeat="kata in katas | filter:filterText | byDifficulty:filterDifficulties as results">
+  <div ng-repeat="kata in katas | filter:filterText | byDifficulty:filterDifficulties as results track by kata.name">
     <h4>
-      <span class="label {{kata.difficulty}}">{{kata.name[0]}}</span>{{kata.name.substr(1)}}</h4>
+      <span class="label on-the-left {{kata.difficulty}}"> </span>
+      <a href="#/katas/{{main.encodeURI(kata.name)}}">{{kata.name}}</a>
+    </h4>
     <p>{{kata.short_description}}</p>
   </div>
   <div ng-if="results.length === 0">

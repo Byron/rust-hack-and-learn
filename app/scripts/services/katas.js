@@ -25,8 +25,28 @@ angular.module('katarsApp')
         description: "multilines ... or from url ...",
       }, ];
 
+      var uniqueName = {};
+      for (var i = 0; i < katas.length; i++) {
+        if (katas[i].name in uniqueName) {
+          throw new Error("Duplicate name: " + katas[i]);
+        }
+        uniqueName[katas[i].name] = null;
+      }
+
+      function kataByName(name) {
+        var found = null;
+        for (var i = 0; i < katas.length; i++) {
+          if (katas[i].name === name) {
+            found = katas[i];
+            break;
+          }
+        }
+        return found;
+      }
+
       return {
         items: katas,
-        difficulties: difficulties
+        difficulties: difficulties,
+        byName: kataByName
       };
     });

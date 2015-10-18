@@ -29,6 +29,10 @@ body {
   &.hard {
     @include label-variant($red);
   }
+
+  &.on-the-left {
+    margin-right: 5px;
+  }
 }
 
 

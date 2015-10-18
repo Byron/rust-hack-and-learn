@@ -16,4 +16,5 @@ angular.module('katarsApp')
     for (var i = 0; i < Katas.difficulties.length; i++) {
       $scope.filterDifficulties[Katas.difficulties[i]] = true;
     }
+    this.encodeURI = window.encodeURI;
   }]);
