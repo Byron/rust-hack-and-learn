@@ -17,4 +17,7 @@ angular.module('katarsApp')
       $scope.filterDifficulties[Katas.difficulties[i]] = true;
     }
     this.encodeURI = window.encodeURI;
+  }])
+  .controller('PairingCtrl', ['$scope', 'URL_PREFIX', function($scope, URL_PREFIX) {
+    $scope.imageUrl = URL_PREFIX + '/images/pairing-poster.jpg';
   }]);

@@ -15,7 +15,8 @@ angular
     'ngRoute',
     'ngTouch',
     'btford.markdown',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'config'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -30,6 +31,7 @@ angular
         controllerAs: 'ctrl'
       })
       .when('/pairing-guide', {
+        controller: 'PairingCtrl',
         templateUrl: 'views/pairing.html',
       })
       .when('/katas/:kata', {
