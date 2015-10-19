@@ -1,8 +1,5 @@
 sudo: true
 language: node_js
-node_js:
-- iojs
-- '0.12'
 before_script:
 - npm install -g bower grunt-cli
 - gem install compass
