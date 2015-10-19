@@ -383,7 +383,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.app %>/scripts/config.js',
         },
         constants: {
-          URL_PREFIX: 'katars'
+          URL_PREFIX: ''
         }
       }
     },
