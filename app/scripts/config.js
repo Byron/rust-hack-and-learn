@@ -2,6 +2,6 @@
 
 angular.module('config', [])
 
-.constant('URL_PREFIX', 'katars')
+.constant('URL_PREFIX', '')
 
 ;

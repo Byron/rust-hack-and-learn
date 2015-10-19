@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('katarsApp')
-  .factory('Katas', ['$http', 'URL_PREFIX',
-    function($http, URL_PREFIX) {
+  .factory('Katas', ['$http',
+    function($http) {
 
       var difficulties = ['easy', 'medium', 'hard'];
 
@@ -28,8 +28,8 @@ angular.module('katarsApp')
       }
 
       function kataResourceUrl(name) {
-        return URL_PREFIX + [
-          '/resources/',
+        return [
+          'resources/',
           'katas',
           name
         ].join('/');

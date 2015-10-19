@@ -18,6 +18,6 @@ angular.module('katarsApp')
     }
     this.encodeURI = window.encodeURI;
   }])
-  .controller('PairingCtrl', ['$scope', 'URL_PREFIX', function($scope, URL_PREFIX) {
-    $scope.imageUrl = URL_PREFIX + '/images/pairing-poster.jpg';
+  .controller('PairingCtrl', ['$scope', function($scope) {
+    $scope.imageUrl = 'images/pairing-poster.jpg';
   }]);
