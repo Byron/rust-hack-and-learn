@@ -19,6 +19,7 @@ angular.module('katarsApp')
       }
 
       $scope.content = null;
+      $scope.exampleUrl = Katas.exampleUrl($scope.kata, $scope.fileName);
       $scope.status = {
         open: false
       };

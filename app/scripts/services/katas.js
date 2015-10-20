@@ -83,8 +83,12 @@ angular.module('katarsApp')
         });
       }
 
+      function exampleUrl(kata, fileName) {
+        return [kataResourceUrl(kata.id), 'examples', fileName].join('/');
+      }
+
       function fetchExample(kata, fileName) {
-        return $http.get([kataResourceUrl(kata.id), 'examples', fileName].join('/'), {
+        return $http.get(exampleUrl(kata, fileName), {
           cache: true
         });
       }
@@ -94,7 +98,8 @@ angular.module('katarsApp')
         difficulties: difficulties,
         byName: kataByName,
         descriptionPromise: fetchDescription,
-        exampleFilePromise: fetchExample
+        exampleFilePromise: fetchExample,
+        exampleUrl: exampleUrl
       };
     }
   ]);
