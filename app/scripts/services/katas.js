@@ -24,6 +24,20 @@ angular.module('katarsApp')
           ]
         }
       }, {
+        name: 'Mandelbrot',
+        id: 'mandelbrot',
+        difficulty: difficulties[2],
+        shortDescription: "A (multi-threaded) mandelbrot renderer",
+        originalSource: "http://benchmarksgame.alioth.debian.org",
+        example: {
+          files: [
+            'mandelbrot.go',
+            'mandelbrot.java',
+            'mandelbrot.rb',
+            'mandelbrot.c',
+          ]
+        }
+      }, {
         name: 'Simple Lists',
         id: 'linked-list',
         difficulty: difficulties[1],
