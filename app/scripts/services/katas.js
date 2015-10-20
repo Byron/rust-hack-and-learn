@@ -11,8 +11,19 @@ angular.module('katarsApp')
         id: 'reversor',
         difficulty: difficulties[0],
         shortDescription: "Reverse strings via command-line and library",
-      },
-      {
+      }, {
+        name: 'Anagrams',
+        id: 'anagrams',
+        difficulty: difficulties[0],
+        shortDescription: "A tiny anagram generator",
+        originalSource: "https://github.com/exercism/xjava/tree/master/anagram",
+        example: {
+          files: [
+            'java/AnagramTest.java',
+            'java/Anagram.java'
+          ]
+        }
+      }, {
         name: 'Simple Lists',
         id: 'linked-list',
         difficulty: difficulties[1],
@@ -53,11 +64,15 @@ angular.module('katarsApp')
       }
 
       function fetchDescription(kata) {
-        return $http.get([kataResourceUrl(kata.id), 'description.md'].join('/'), {cache: true});
+        return $http.get([kataResourceUrl(kata.id), 'description.md'].join('/'), {
+          cache: true
+        });
       }
 
       function fetchExample(kata, fileName) {
-        return $http.get([kataResourceUrl(kata.id), 'examples', fileName].join('/'), {cache: true});
+        return $http.get([kataResourceUrl(kata.id), 'examples', fileName].join('/'), {
+          cache: true
+        });
       }
 
       return {
@@ -67,4 +82,5 @@ angular.module('katarsApp')
         descriptionPromise: fetchDescription,
         exampleFilePromise: fetchExample
       };
-    }]);
+    }
+  ]);
