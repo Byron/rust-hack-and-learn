@@ -30,6 +30,5 @@ $ library-client
 hello world -> dlrow olleh
 ```
 
-* a unit-test proves that the functionality is correct.
- - e.g. show that `hello™` results in `™elloh`
+* a unit-test proves that the functionality is correct (*e.g. show that `hello™` results in `™elloh`*)
 * a functional test proves that the command-line tool works
