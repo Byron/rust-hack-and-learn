@@ -7,11 +7,17 @@ angular.module('katarsApp')
       var difficulties = ['easy', 'medium', 'hard'];
 
       var katas = [{
-        name: 'Simple Lists',
+        name: 'The Reversor',
+        id: 'reversor',
         difficulty: difficulties[0],
+        shortDescription: "Reverse strings via command-line and library",
+      },
+      {
+        name: 'Simple Lists',
+        id: 'linked-list',
+        difficulty: difficulties[1],
         shortDescription: "Implement a linked list",
         originalSource: "http://codekata.com/kata/kata21-simple-lists/",
-        description_md: "multilines ... or from url ...",
         example: {
           files: [
             'linked-list.rb'
@@ -27,11 +33,11 @@ angular.module('katarsApp')
         uniqueName[katas[i].name] = null;
       }
 
-      function kataResourceUrl(name) {
+      function kataResourceUrl(id) {
         return [
           'resources/',
           'katas',
-          name
+          id
         ].join('/');
       }
 
@@ -47,11 +53,11 @@ angular.module('katarsApp')
       }
 
       function fetchDescription(kata) {
-        return $http.get([kataResourceUrl(kata.name), 'description.md'].join('/'), {cache: true});
+        return $http.get([kataResourceUrl(kata.id), 'description.md'].join('/'), {cache: true});
       }
 
       function fetchExample(kata, fileName) {
-        return $http.get([kataResourceUrl(kata.name), 'examples', fileName].join('/'), {cache: true});
+        return $http.get([kataResourceUrl(kata.id), 'examples', fileName].join('/'), {cache: true});
       }
 
       return {
