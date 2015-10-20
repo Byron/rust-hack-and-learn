@@ -16,6 +16,6 @@ describe('Filters: Custom', function() {
 
   it('should remove katas not matching the given difficulty', function() {
     expect(katas.items[0].difficulty).toBe(katas.difficulties[0]);
-    expect(difficultyFilter(katas.items, {'easy': true})).toEqual([katas.items[0]]);
+    expect(difficultyFilter(katas.items, {'easy': true})[0]).toEqual(katas.items[0]);
   });
 });
