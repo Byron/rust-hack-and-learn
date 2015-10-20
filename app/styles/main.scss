@@ -178,6 +178,10 @@ body {
   }
 }
 
+.panel-group *:hover {
+  text-decoration: none;
+}
+
 .panel-body {
   padding: 0;
 
