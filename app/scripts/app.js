@@ -30,6 +30,11 @@ angular
         controller: 'DownloadCtrl',
         controllerAs: 'ctrl'
       })
+      .when('/katas', {
+        templateUrl: 'views/katas.html',
+        controller: 'KataListCtrl',
+        controllerAs: 'ctrl'
+      })
       .when('/pairing-guide', {
         controller: 'PairingCtrl',
         templateUrl: 'views/pairing.html',
