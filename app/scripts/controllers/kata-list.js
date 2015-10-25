@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('katarsApp')
+angular.module('hackAndLearnAppApp')
   .controller('KataListCtrl', ['$scope', 'Katas', function($scope, Katas) {
     $scope.katas = Katas.items;
     $scope.difficulties = Katas.difficulties;

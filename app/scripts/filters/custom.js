@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('katarsApp')
+angular.module('hackAndLearnAppApp')
 .filter('byDifficulty', function(){
   function byDifficulty(input, difficulties) {
     if (!difficulties) {

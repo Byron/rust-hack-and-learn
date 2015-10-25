@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('katarsApp')
+angular.module('hackAndLearnAppApp')
   .controller('KataDetailCtrl', ['$scope', 'Katas', '$route', '$timeout', function($scope, Katas, $route, $timeout) {
     var kataName = $route.current.params.kata;
     if (!angular.isString(kataName)) {

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('katarsApp')
+angular.module('hackAndLearnAppApp')
   .directive('codeexample', ['Katas', function(Katas) {
 
     function link($scope, element, attrs) {

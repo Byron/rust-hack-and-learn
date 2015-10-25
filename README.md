@@ -1,6 +1,6 @@
 A simple web-app to assure one can exercise Rust katas even *without internet*. You can host it by running `make`, open an ad-hoc network and direct the students to your IP/hostname.
 
-![screen](https://raw.githubusercontent.com/Byron/katars/master/screen01.png)
+![screen](https://raw.githubusercontent.com/Byron/rust-hack-and-learn/master/screen01.png)
 
 It provides:
 
@@ -28,7 +28,7 @@ Additionally, you will need:
 
 ## Build & development
 
-[![Build Status](https://travis-ci.org/Byron/katars.svg?branch=master)](https://travis-ci.org/Byron/katars)
+[![Build Status](https://travis-ci.org/Byron/rust-hack-and-learn.svg?branch=master)](https://travis-ci.org/Byron/rust-hack-and-learn)
 
 Run `grunt` for building and `grunt serve` for preview.
 
@@ -37,5 +37,5 @@ Run `grunt` for building and `grunt serve` for preview.
 Running `grunt test` will run the unit tests with karma.
 
 
-[Katas.js]: https://github.com/Byron/katars/blob/master/app/scripts/services/katas.js#L9
-[res-katas]: https://github.com/Byron/katars/tree/master/app/resources/katas
+[Katas.js]: https://github.com/Byron/rust-hack-and-learn/blob/master/app/scripts/services/katas.js#L9
+[res-katas]: https://github.com/Byron/rust-hack-and-learn/tree/master/app/resources/katas

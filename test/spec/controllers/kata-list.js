@@ -3,7 +3,7 @@
 describe('Controller: KataListCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('katarsApp'));
+  beforeEach(module('hackAndLearnAppApp'));
 
   var MainCtrl,
     scope;

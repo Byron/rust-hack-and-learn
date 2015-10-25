@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name katarsApp
+ * @name hackAndLearnAppApp
  * @description
- * # katarsApp
+ * # hackAndLearnAppApp
  *
  * Main module of the application.
  */
 angular
-  .module('katarsApp', [
+  .module('hackAndLearnAppApp', [
     'ngAnimate',
     'ngMessages',
     'ngRoute',

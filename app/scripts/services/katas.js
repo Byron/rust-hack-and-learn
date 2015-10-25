@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('katarsApp')
+angular.module('hackAndLearnAppApp')
   .factory('Katas', ['$http',
     function($http) {
 

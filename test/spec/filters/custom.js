@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Filters: Custom', function() {
-  beforeEach(module('katarsApp'));
+  beforeEach(module('hackAndLearnAppApp'));
 
   var difficultyFilter, katas;
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('katarsApp')
+angular.module('hackAndLearnAppApp')
   .controller('DownloadCtrl', ['$scope', function($scope) {
     $scope.platforms = [
       {

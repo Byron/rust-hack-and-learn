@@ -2,7 +2,7 @@
 
 describe('Controller: KataDetailCtrl', function() {
 
-  beforeEach(module('katarsApp'));
+  beforeEach(module('hackAndLearnAppApp'));
 
   var DetailCtrl,
     scope;

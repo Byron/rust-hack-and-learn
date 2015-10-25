@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('katarsApp')
+angular.module('hackAndLearnAppApp')
   .controller('MainCtrl', ['$scope', function($scope) {
 
   }])

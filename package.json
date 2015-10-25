@@ -1,5 +1,5 @@
 {
-  "name": "katars",
+  "name": "hackAndLearnApp",
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",

@@ -2,7 +2,7 @@
 
 describe('Service: Katas', function () {
 
-  beforeEach(module('katarsApp'));
+  beforeEach(module('hackAndLearnAppApp'));
 
   var katas;
 
