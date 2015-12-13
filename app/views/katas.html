@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-if="katas.length > 6">
   <p>
     <div class="difficulties-radio btn-group">
       <label uib-btn-checkbox ng-repeat="level in difficulties" class="btn btn-primary label" ng-class="level" ng-model="filterDifficulties[level]">{{level}}
