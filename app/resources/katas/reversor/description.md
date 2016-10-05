@@ -18,7 +18,7 @@ $ reversor bar foo
 oof rab
 $ reversor hello™
 ™olleh
-$ reversor && echo $?
+$ reversor || echo $?
 Please provide at least one argument to reverse
 1
 ```
